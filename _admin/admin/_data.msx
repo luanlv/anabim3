@@ -1,0 +1,8 @@
+var Data = {};
+
+Data.imgs = m.prop([]);
+Data.requestImg = {
+  ready: m.prop(false)
+};
+
+module.exports = Data;

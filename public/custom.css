@@ -1,0 +1,401 @@
+/**
+ * Styles entry
+ */
+/**
+ * Main stylesheet
+ */
+#sidebar {
+  z-index: 150;
+  /* Hide the inner submenus */
+  /*
+  When a submenu is openend, we will hide all li siblings.
+  For that we give a class to the parent menu called "dl-subview".
+  We also hide the submenu link.
+  The opened submenu will get the class "dl-subviewopen".
+  All this is done for any sub-level being entered.
+  */
+  /* Dynamically added submenu outside of the menu context */
+  /* Animation classes for moving out and in */
+  /* No JS Fallback */
+  /* Colors for demos */
+  /* Demo 1 */
+  /* Demo 2 */
+  /* Demo 3 */
+  /* Demo 4 */
+  /* Demo 5 */ }
+  #sidebar .dl-menuwrapper {
+    width: 100%;
+    max-width: 350px;
+    float: left;
+    position: relative;
+    perspective: 1000px;
+    perspective-origin: 50% 200%; }
+  #sidebar .dl-menuwrapper button {
+    background: #ccc;
+    border: none;
+    width: 48px;
+    height: 45px;
+    text-indent: -900em;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    outline: none; }
+  #sidebar .dl-menuwrapper button:hover,
+  #sidebar .dl-menuwrapper button.dl-active,
+  #sidebar .dl-menuwrapper ul {
+    background: #aaa; }
+  #sidebar .dl-menuwrapper button:after {
+    content: '';
+    position: absolute;
+    width: 68%;
+    height: 5px;
+    background: #fff;
+    top: 10px;
+    left: 16%;
+    box-shadow: 0 10px 0 #fff, 0 20px 0 #fff; }
+  #sidebar .dl-menuwrapper ul {
+    padding: 0;
+    list-style: none;
+    transform-style: preserve-3d; }
+  #sidebar .dl-menuwrapper li {
+    position: relative; }
+  #sidebar .dl-menuwrapper li a {
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #fff;
+    outline: none; }
+  #sidebar .no-touch .dl-menuwrapper li a:hover {
+    background: rgba(255, 248, 213, 0.1); }
+  #sidebar .dl-menuwrapper li.dl-back > a {
+    padding-left: 30px;
+    background: rgba(0, 0, 0, 0.1); }
+  #sidebar .dl-menuwrapper li.dl-back:after,
+  #sidebar .dl-menuwrapper li > a:not(:only-child):after {
+    position: absolute;
+    top: 0;
+    line-height: 50px;
+    font-family: 'icomoon';
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    content: "\e000"; }
+  #sidebar .dl-menuwrapper li.dl-back:after {
+    left: 10px;
+    color: rgba(212, 204, 198, 0.3);
+    transform: rotate(180deg); }
+  #sidebar .dl-menuwrapper li > a:after {
+    right: 10px;
+    color: rgba(0, 0, 0, 0.15); }
+  #sidebar .dl-menuwrapper .dl-menu {
+    margin: 5px 0 0 0;
+    position: absolute;
+    width: 100%;
+    min-width: 300px !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  #sidebar .dl-menuwrapper .dl-menu.dl-menu-toggle {
+    min-width: 300px !important;
+    transition: all 0.3s ease; }
+  #sidebar .dl-menuwrapper .dl-menu.dl-menuopen {
+    min-width: 300px !important;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0px); }
+  #sidebar .dl-menuwrapper li .dl-submenu {
+    display: none; }
+  #sidebar .dl-menu.dl-subview li,
+  #sidebar .dl-menu.dl-subview li.dl-subviewopen > a,
+  #sidebar .dl-menu.dl-subview li.dl-subview > a {
+    display: none; }
+  #sidebar .dl-menu.dl-subview li.dl-subview,
+  #sidebar .dl-menu.dl-subview li.dl-subview .dl-submenu,
+  #sidebar .dl-menu.dl-subview li.dl-subviewopen,
+  #sidebar .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+  #sidebar .dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+    min-width: 300px !important;
+    display: block; }
+  #sidebar .dl-menuwrapper > .dl-submenu {
+    min-width: 300px !important;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    margin: 0; }
+  #sidebar .dl-menu.dl-animate-out-1 {
+    animation: MenuAnimOut1 0.4s; }
+  #sidebar .dl-menu.dl-animate-out-2 {
+    animation: MenuAnimOut2 0.3s ease-in-out; }
+  #sidebar .dl-menu.dl-animate-out-3 {
+    animation: MenuAnimOut3 0.4s ease; }
+  #sidebar .dl-menu.dl-animate-out-4 {
+    animation: MenuAnimOut4 0.4s ease; }
+  #sidebar .dl-menu.dl-animate-out-5 {
+    animation: MenuAnimOut5 0.4s ease; }
+
+@keyframes MenuAnimOut1 {
+  0% { }
+  50% {
+    transform: translateZ(-250px) rotateY(30deg); }
+  75% {
+    transform: translateZ(-372.5px) rotateY(15deg);
+    opacity: .5; }
+  100% {
+    transform: translateZ(-500px) rotateY(0deg);
+    opacity: 0; } }
+
+@keyframes MenuAnimOut2 {
+  0% { }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0; } }
+
+@keyframes MenuAnimOut3 {
+  0% { }
+  100% {
+    transform: translateZ(300px);
+    opacity: 0; } }
+
+@keyframes MenuAnimOut4 {
+  0% { }
+  100% {
+    transform: translateZ(-300px);
+    opacity: 0; } }
+
+@keyframes MenuAnimOut5 {
+  0% { }
+  100% {
+    transform: translateY(40%);
+    opacity: 0; } }
+  #sidebar .dl-menu.dl-animate-in-1 {
+    animation: MenuAnimIn1 0.3s; }
+  #sidebar .dl-menu.dl-animate-in-2 {
+    animation: MenuAnimIn2 0.3s ease-in-out; }
+  #sidebar .dl-menu.dl-animate-in-3 {
+    animation: MenuAnimIn3 0.4s ease; }
+  #sidebar .dl-menu.dl-animate-in-4 {
+    animation: MenuAnimIn4 0.4s ease; }
+  #sidebar .dl-menu.dl-animate-in-5 {
+    animation: MenuAnimIn5 0.4s ease; }
+
+@keyframes MenuAnimIn1 {
+  0% {
+    transform: translateZ(-500px) rotateY(0deg);
+    opacity: 0; }
+  20% {
+    transform: translateZ(-250px) rotateY(30deg);
+    opacity: 0.5; }
+  100% {
+    transform: translateZ(0px) rotateY(0deg);
+    opacity: 1; } }
+
+@keyframes MenuAnimIn2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes MenuAnimIn3 {
+  0% {
+    transform: translateZ(300px);
+    opacity: 0; }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1; } }
+
+@keyframes MenuAnimIn4 {
+  0% {
+    transform: translateZ(-300px);
+    opacity: 0; }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1; } }
+
+@keyframes MenuAnimIn5 {
+  0% {
+    transform: translateY(40%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
+    animation: SubMenuAnimIn1 0.4s ease; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-in-2 {
+    animation: SubMenuAnimIn2 0.3s ease-in-out; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-in-3 {
+    animation: SubMenuAnimIn3 0.4s ease; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+    animation: SubMenuAnimIn4 0.4s ease; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-in-5 {
+    animation: SubMenuAnimIn5 0.4s ease; }
+
+@keyframes SubMenuAnimIn1 {
+  0% {
+    transform: translateX(50%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes SubMenuAnimIn2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes SubMenuAnimIn3 {
+  0% {
+    transform: translateZ(-300px);
+    opacity: 0; }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1; } }
+
+@keyframes SubMenuAnimIn4 {
+  0% {
+    transform: translateZ(300px);
+    opacity: 0; }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1; } }
+
+@keyframes SubMenuAnimIn5 {
+  0% {
+    transform: translateZ(-200px);
+    opacity: 0; }
+  100% {
+    transform: translateZ(0);
+    opacity: 1; } }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
+    animation: SubMenuAnimOut1 0.4s ease; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-out-2 {
+    animation: SubMenuAnimOut2 0.3s ease-in-out; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-out-3 {
+    animation: SubMenuAnimOut3 0.4s ease; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+    animation: SubMenuAnimOut4 0.4s ease; }
+  #sidebar .dl-menuwrapper > .dl-submenu.dl-animate-out-5 {
+    animation: SubMenuAnimOut5 0.4s ease; }
+
+@keyframes SubMenuAnimOut1 {
+  0% {
+    transform: translateX(0%);
+    opacity: 1; }
+  100% {
+    transform: translateX(50%);
+    opacity: 0; } }
+
+@keyframes SubMenuAnimOut2 {
+  0% {
+    transform: translateX(0%);
+    opacity: 1; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; } }
+
+@keyframes SubMenuAnimOut3 {
+  0% {
+    transform: translateZ(0px);
+    opacity: 1; }
+  100% {
+    transform: translateZ(-300px);
+    opacity: 0; } }
+
+@keyframes SubMenuAnimOut4 {
+  0% {
+    transform: translateZ(0px);
+    opacity: 1; }
+  100% {
+    transform: translateZ(300px);
+    opacity: 0; } }
+
+@keyframes SubMenuAnimOut5 {
+  0% {
+    transform: translateZ(0);
+    opacity: 1; }
+  100% {
+    transform: translateZ(-200px);
+    opacity: 0; } }
+  #sidebar .no-js .dl-menuwrapper .dl-menu {
+    position: relative;
+    min-width: 300px !important;
+    opacity: 1;
+    transform: none; }
+  #sidebar .no-js .dl-menuwrapper li .dl-submenu {
+    display: block; }
+  #sidebar .no-js .dl-menuwrapper li.dl-back {
+    display: none; }
+  #sidebar .no-js .dl-menuwrapper li > a:not(:only-child) {
+    background: rgba(0, 0, 0, 0.1); }
+  #sidebar .no-js .dl-menuwrapper li > a:not(:only-child):after {
+    content: ''; }
+  #sidebar .demo-1 .dl-menuwrapper button {
+    background: #c62860; }
+  #sidebar .demo-1 .dl-menuwrapper button:hover,
+  #sidebar .demo-1 .dl-menuwrapper button.dl-active,
+  #sidebar .demo-1 .dl-menuwrapper ul {
+    background: #9e1847; }
+  #sidebar .demo-2 .dl-menuwrapper button {
+    background: #e86814; }
+  #sidebar .demo-2 .dl-menuwrapper button:hover,
+  #sidebar .demo-2 .dl-menuwrapper button.dl-active,
+  #sidebar .demo-2 .dl-menuwrapper ul {
+    background: #D35400; }
+  #sidebar .demo-3 .dl-menuwrapper button {
+    background: #08cbc4; }
+  #sidebar .demo-3 .dl-menuwrapper button:hover,
+  #sidebar .demo-3 .dl-menuwrapper button.dl-active,
+  #sidebar .demo-3 .dl-menuwrapper ul {
+    background: #00b4ae; }
+  #sidebar .demo-4 .dl-menuwrapper button {
+    background: #000000; }
+  #sidebar .demo-4 .dl-menuwrapper button:hover,
+  #sidebar .demo-4 .dl-menuwrapper button.dl-active,
+  #sidebar .demo-4 .dl-menuwrapper ul {
+    background: #1B1C1D;
+    z-index: 150; }
+  #sidebar .demo-5 .dl-menuwrapper button {
+    background: #744783; }
+  #sidebar .dl-menuwrapper button:hover,
+  #sidebar .dl-menuwrapper button.dl-active,
+  #sidebar .dl-menuwrapper ul {
+    background: #1B1C1D; }
+  #sidebar .dl-submenu {
+    max-height: 80vh;
+    overflow-y: auto; }
+
+#sidebar {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none !important; }
+  .search1 {
+    display: none !important; }
+  #sidebar {
+    display: block; } }
+
+@media screen and (max-width: 950px) {
+  .index-3 span {
+    display: none; } }
+
+.loading {
+  display: none; }
+
+.index-10 {
+  margin: 40px auto !important; }
+
+.fb-comments, .fb-comments iframe[style] {
+  width: 100% !important; }
+
+.fb-comments > span {
+  width: 100% !important; }

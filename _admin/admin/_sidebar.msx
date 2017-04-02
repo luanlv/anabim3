@@ -1,0 +1,134 @@
+var Sidebar = function(ctrl){
+  return [
+    <nav className="page-sidebar" data-pages="sidebar" >
+      <div className="sidebar-header" style="font-weight: bold; text-align: center">
+        <a href="/admin"
+          config={m.route}
+        >
+          TRANG QUẢN LÝ
+        </a>
+      </div>
+ 
+      <div className="sidebar-menu" >
+        <ul className="menu-items">
+          {/*<li className="side-menu ">*/}
+            {/*<a href="/users" className="detailed"*/}
+              {/*config={m.route}*/}
+            {/*>*/}
+              {/*<span className="title">Thành viên</span>*/}
+              {/*<span className="details"></span>*/}
+            {/*</a>*/}
+            {/*<span className="icon-thumbnail"><i className="fa fa-users"></i></span>*/}
+          {/*</li>*/}
+  
+          <li className="side-menu ">
+            <a href="/cate" className="detailed"
+               config={m.route}
+            >
+              <span className="title">Danh mục</span>
+              <span className="details"></span>
+            </a>
+            <span className="icon-thumbnail"><i className="fa  fa-th-list"></i></span>
+          </li>
+          
+          <li className="side-menu ">
+            <a href="/soft" className="detailed"
+               config={m.route}
+            >
+              <span className="title">Phần mềm</span>
+              <span className="details"></span>
+            </a>
+            <span className="icon-thumbnail"><i className="fa  fa-th-list"></i></span>
+          </li>
+          
+          <li className="side-menu ">
+            <a href="/course" className="detailed"
+               config={m.route}
+            >
+              <span className="title">KH / Video</span>
+              <span className="details"></span>
+            </a>
+            <span className="icon-thumbnail"><i className="fa  fa-th-list"></i></span>
+          </li>
+          <li className="side-menu ">
+            <a href="javascript:;">
+              <span className="title">Memberships</span>
+              <span className="details"></span>
+            </a>
+            <span className="icon-thumbnail"><i className="fa  fa-th-list"></i></span>
+            <ul className="sub-menu" style="display: block;">
+              <li className="">
+                <a href="/membership"
+                  config={m.route}
+                >Đơn hàng</a>
+              </li>
+              <li className="">
+                <a href="/membership2"
+                   config={m.route}
+                >Đã duyệt</a>
+              </li>
+              <li className="">
+                <a href="/membership/users"
+                   config={m.route}
+                >Membership</a>
+              </li>
+              <li className="">
+                <a href="/price"
+                   config={m.route}
+                >Bảng giá</a>
+              </li>
+              <li className="">
+                <a href="/coupon"
+                   config={m.route}
+                >Mã giảm giá</a>
+              </li>
+              <li className="">
+                <a href="/activecode"
+                   config={m.route}
+                >Mã kích hoạt</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li className="side-menu ">
+            <a href="javascript:;">
+              <span className="title">Trang chủ</span>
+              <span className="details"></span>
+            </a>
+            <span className="icon-thumbnail"><i className="fa  fa-th-list"></i></span>
+            <ul className="sub-menu" style="display: block;">
+              <li className="">
+                <a href="/trangchu/khoahoc"
+                   config={m.route}
+                >KH</a>
+              </li>
+            </ul>
+          </li>
+
+          <li className="side-menu ">
+            <a href="javascript:;">
+              <span className="title">Bài viết</span>
+              <span className="details"></span>
+            </a>
+            <span className="icon-thumbnail"><i className="fa  fa-th-list"></i></span>
+            <ul className="sub-menu" style="display: block;">
+              <li className="">
+                <a href="/baiviet/danhsach"
+                   config={m.route}
+                >Danh sách</a>
+              </li>
+              <li className="">
+                <a href="/baiviet/danhsach"
+                   config={m.route}
+                >Thêm mới</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div className="clearfix"></div>
+      </div>
+    </nav>
+  ]
+};
+
+module.exports = Sidebar;

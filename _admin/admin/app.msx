@@ -1,0 +1,34 @@
+
+var Home = require("./home/main.msx");
+var Users = require("./users/main.msx");
+var Course = require("./course/main.msx");
+var Cate = require("./cate/main.msx");
+var Soft = require("./software/main.msx");
+var Video = require("./video/main.msx");
+var Membership = require("./membership/main.msx");
+var Membership2 = require("./membership2/main.msx");
+var Price = require("./price/main.msx");
+var Coupon = require("./coupon/main.msx");
+var ActiveCode = require("./activeCode/main.msx");
+var Khoahoc = require("./khoahoc/main.msx");
+
+// var NewQuestion = require("./newquestion/main.msx");
+// var EditQuestion = require("./editquestion/main.msx");
+
+m.route.mode = 'hash';
+
+m.route(document.body, "/", {
+  "/": Home,
+  "/users": Users,
+  "/course": Course,
+  "/video/:courseId": Video,
+  "/cate": Cate,
+  "/soft": Soft,
+  "/membership": Membership,
+  "/membership2": Membership2,
+  "/membership/users": Users,
+  "/price": Price,
+  "/coupon": Coupon,
+  "/activecode": ActiveCode,
+  "/trangchu/khoahoc": Khoahoc
+});

@@ -1,0 +1,70 @@
+/**
+ * Main stylesheet
+ */
+
+// '~' denotes npm module
+//@import '~md-colors'
+//
+//@import 'config/vars'
+//@import 'config/extns'
+//@import 'config/mixins'
+//
+//@import 'base/reset'
+//@import 'base/doc'
+//
+//// tags first; pages can customize
+//@import 'tags/header'
+//@import 'tags/layout'
+//@import 'tags/page'
+//@import 'tags/card'
+//@import 'tags/card-link'
+//
+//@import 'pages/home'
+//@import 'pages/article'
+//@import 'pages/errors/404'
+
+
+//@import 'custom';
+//@import 'loading';
+@import 'menu';
+
+
+#sidebar {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none !important;
+  }
+  .search1 {
+    display: none !important;
+  }
+  #logo {
+    //display: none;
+  }
+
+  #sidebar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .index-3 {
+    span {
+      display: none;
+    }
+  }
+}
+
+.loading {
+  display: none;
+}
+
+.index-10 {
+  margin: 40px auto !important;
+}
+
+.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+.fb-comments > span {
+  width: 100% !important;
+}
