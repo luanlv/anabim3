@@ -40,7 +40,7 @@ passport.use(new LocalStrategy(
 passport.use(new FacebookStrategy({
     clientID:'386911785028195',
     clientSecret:'a6bb364bfff3a80ccb7e8901c6cee32b',
-    callbackURL:'http://localhost:3000/auth/facebook/callback',
+    callbackURL:'http://edu.anabim.com/auth/facebook/callback',
     profileFields: ['id', 'displayName', 'emails', 'name']
   }, function(accessToken, refreshToken, profile, cb) {
   User.findOrCreate({username: profile.emails[0].value},
@@ -66,7 +66,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GoogleStrategy({
     clientID: '181209932345-e5onckmk63rbchst6djlq9tjshbkmr79.apps.googleusercontent.com',
     clientSecret: 'a6Nz9Od7WfL82VdnFwpxLvKq',
-    callbackURL: "http://localhost:3000/auth/google/callback"
+    callbackURL: "http://edu.anabim.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(' Google stragety ')
@@ -115,7 +115,7 @@ router.post('/signup', (req, res) => {
       User.createUser(req.body, (err, user) => {
         if (err) throw err
         Token.create({type: 'signup', email: user.username}, (err, token) => {
-          Mailer.sendActiveMail(user.username, user.name, 'http://localhost:3000/token/active/' + token.token)
+          Mailer.sendActiveMail(user.username, user.name, 'http://edu.anabim.com/token/active/' + token.token)
           res.json({status: true, m: user.username})
         })
       })
