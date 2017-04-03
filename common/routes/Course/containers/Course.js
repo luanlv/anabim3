@@ -10,6 +10,7 @@ import fn from '../../../components/Fn'
 import CourseInfo from '../components/CourseInfo'
 import Video from '../components/Video'
 import FacebookProvider, { Comments } from 'react-facebook'
+import moment from 'moment'
 
 const redial = {
   fetch: ({ dispatch, params: { slug } }) => dispatch(loadData(slug))
@@ -48,8 +49,10 @@ class Course extends React.Component {
       let user = this.props.tree.user
       console.log(user)
       console.log(user.member === 'pending')
+      var day = Math.floor(Math.random()*10)
+			var key = "" + moment(moment().format()).add(day, 'days').unix() + day
       var videoBySlug = fn.findVideoBySlug(this.props.tree.videos.value, this.props.params.slug, this.props.params.videoSlug)
-      var linkVideo = ((videoBySlug.source === 'anabim') ? ('http://video.vnguy.com/?v=' + fn.fixVideo(videoBySlug.link)) : ('https://www.youtube.com/embed/' + videoBySlug.link + '?autoplay=1'))
+      var linkVideo = ((videoBySlug.source === 'anabim') ? ('http://video.vnguy.com/?v=' + fn.fixVideo(videoBySlug.link)  + '&k=' + key) : ('https://www.youtube.com/embed/' + videoBySlug.link + '?autoplay=1'))
 
       var button = (user.member === 'pending') ? (
         <button className='ui large orange button'
@@ -60,7 +63,9 @@ class Course extends React.Component {
         ) : (
           <button className='ui large orange button '
             onClick={function () {
-              if (!user) {
+             console.log('click ')
+              if (!user.username) {
+                console.log('dang ky')
                 $('#dang-ky')
                   .modal('show')
               } else {
@@ -141,7 +146,7 @@ class Course extends React.Component {
                       )
                     }
                   </div>
-                  <CourseInfo course={course} />
+                  <CourseInfo course={course} user={user} />
                 </div>
                 <div className='five wide column ' style={{paddingLeft: '0 !important'}}>
 

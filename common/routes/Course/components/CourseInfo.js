@@ -1,3 +1,4 @@
+ /* eslint-disable */
 /* global $ */
 import React from 'react'
 
@@ -54,7 +55,11 @@ export default class CourseInfo extends React.Component {
             </div>
           </div>
           <div className='ui  tab ' data-tab='2' style={{padding: '15px'}}>
-            {this.props.course.documents ? (<div dangerouslySetInnerHTML={{__html: this.props.course.documents}} />) : ('')}
+            {( this.props.user && (this.props.user.member === 'membership' ||  this.props.user.member === 'trial') ) ? (
+              this.props.course.documents ? (<div dangerouslySetInnerHTML={{__html: this.props.course.documents}} />) : ('')
+            ) : (
+              <div>Tài liệu chỉ dành cho thành viên Membership</div>
+            )}
           </div>
           <div className='ui tab' data-tab='3' style={{padding: '15px'}}>
             {this.props.course.sanpham ? (<div dangerouslySetInnerHTML={{__html: this.props.course.sanpham}} />) : ('')}

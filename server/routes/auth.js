@@ -38,8 +38,8 @@ passport.use(new LocalStrategy(
 ))
 
 passport.use(new FacebookStrategy({
-    clientID:'386911785028195',
-    clientSecret:'a6bb364bfff3a80ccb7e8901c6cee32b',
+    clientID:'194314087737241',
+    clientSecret:'053deee6df7b9ec3c557f27ed7afd1e3',
     callbackURL:'http://edu.anabim.com/auth/facebook/callback',
     profileFields: ['id', 'displayName', 'emails', 'name']
   }, function(accessToken, refreshToken, profile, cb) {

@@ -7,6 +7,7 @@ const Software = mongoose.model('Software')
 router.get('/:query', (req, res) => {
   let query = req.params.query
   var r = new RegExp(req.params.query,'i')
+  console.log(req.params.query)
   Course.aggregate([
     {$match: {$or: [{ $text: {$search: query}}]}},
     {$project: {slug: {$concat: ['/course/','$slug']}, name: 1}}
